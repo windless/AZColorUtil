@@ -7,6 +7,8 @@
 //
 
 #import "AZViewController.h"
+#import <UIColor+HexColor.h>
+#import <UIColor+ConverToImage.h>
 
 @interface AZViewController ()
 
@@ -14,16 +16,18 @@
 
 @implementation AZViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.view.backgroundColor = [UIColor hexColor:0xffffff];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+  button.frame = CGRectMake(100, 100, 100, 100);
+  UIImage *image = [[UIColor redColor] az_imageWithSize:button.frame.size];
+  [button setImage:image forState:UIControlStateNormal];
+  [button setImage:[[UIColor blueColor] az_imageWithSize:button.frame.size]
+          forState:UIControlStateHighlighted];
+  button.imageView.contentMode = UIViewContentModeScaleToFill;
+  [self.view addSubview:button];
 }
 
 @end

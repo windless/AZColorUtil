@@ -6,37 +6,30 @@
 //  Copyright (c) 2014 Abner Zhong. All rights reserved.
 //
 
-SPEC_BEGIN(InitialTests)
+#import <UIColor+HexColor.h>
 
-describe(@"My initial tests", ^{
+SPEC_BEGIN(HexColor)
 
-  context(@"will fail", ^{
+describe(@"UIColor", ^{
+    describe(@"hexColor", ^{
+        it(@"converts to uicolor", ^{
+            UIColor *color = [UIColor colorWithRed:100 / 255.0
+                                             green:200 / 255.0
+                                              blue:255 / 255.0
+                                             alpha:1];
+            UIColor *newColor = [UIColor hexColor:0x64c8ff];
+            [[color should] equal:newColor];
+        });
 
-      it(@"can do maths", ^{
-          [[@1 should] equal:@2];
-      });
-
-      it(@"can read", ^{
-          [[@"number" should] equal:@"string"];
-      });
-    
-      it(@"will wait and fail", ^{
-          NSObject *object = [[NSObject alloc] init];
-          [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
-      });
-  });
-
-  context(@"will pass", ^{
-    
-      it(@"can do maths", ^{
-        [[@1 should] beLessThan:@23];
-      });
-    
-      it(@"can read", ^{
-          [[@"team" shouldNot] containString:@"I"];
-      });  
-  });
-  
+        it(@"convers to UIColor with alpha", ^{
+            UIColor *color = [UIColor colorWithRed:100 / 255.0
+                                             green:200 / 255.0
+                                              blue:255 / 255.0
+                                             alpha:0.5];
+            UIColor *newColor = [UIColor hexColor:0x64c8ff alpha:0.5];
+            [[color should] equal:newColor];
+        });
+    });
 });
 
 SPEC_END

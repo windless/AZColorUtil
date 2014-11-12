@@ -10,19 +10,16 @@
 Pod::Spec.new do |s|
   s.name             = "AZColorUtil"
   s.version          = "0.1.0"
-  s.summary          = "A short description of AZColorUtil."
+  s.summary          = "UIColor Util"
   s.description      = <<-DESC
-                       An optional longer description of AZColorUtil
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+    UIColor Util
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/AZColorUtil"
+  s.homepage         = "https://github.com/windless/AZColorUtil"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Abner Zhong" => "windlessg@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/AZColorUtil.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/windless/AZColorUtil.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/windlessaz'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
