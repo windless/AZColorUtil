@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'AZColorUtil', :exclusive => true do
+  pod "AZColorUtil", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "AZColorUtil", :path => "../"
+
+  pod 'Kiwi'
+end
