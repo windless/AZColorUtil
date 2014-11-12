@@ -1,0 +1,17 @@
+PODS:
+  - AZColorUtil (0.1.0)
+  - Kiwi (2.3.1)
+
+DEPENDENCIES:
+  - AZColorUtil (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  AZColorUtil:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AZColorUtil: 7396cc131ef9671601e6624f52fbea8e2352459a
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+
+COCOAPODS: 0.34.4
