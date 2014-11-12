@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
   s.name             = "AZColorUtil"
   s.version          = "0.1.0"
-  s.summary          = "UIColor Util"
+  s.summary          = "UIColorUtil"
   s.description      = <<-DESC
     UIColor Util
                        DESC

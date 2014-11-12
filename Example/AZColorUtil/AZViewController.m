@@ -7,8 +7,7 @@
 //
 
 #import "AZViewController.h"
-#import <UIColor+HexColor.h>
-#import <UIColor+ConverToImage.h>
+#import <AZColorUtil.h>
 
 @interface AZViewController ()
 

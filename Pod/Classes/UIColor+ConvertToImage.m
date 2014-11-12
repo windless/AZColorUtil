@@ -6,7 +6,7 @@
 //
 //
 
-#import "UIColor+ConverToImage.h"
+#import "UIColor+ConvertToImage.h"
 
 @implementation UIColor (ConverToImage)
 
